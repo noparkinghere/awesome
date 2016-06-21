@@ -7,11 +7,15 @@
 
 DESTDIR=~/.config/awesome
 PROJECT=copycat-killer/awesome-copycats
+MYPROJECT=noparkinghere/awesome
 
 # $(swap_dialog)
 define swap_dialog
 	echo ; \
 	echo "see https://github.com/$(PROJECT)" ; \
+    echo ; \
+	echo "see https://github.com/$(MYPROJECT)" ; \
+
 	echo ; $(themes) | cat -n ; echo ; \
 	typeset -i num; \
 	read -p "Switch to theme: " num ; \
@@ -39,4 +43,4 @@ all: $(DESTDIR)
 	$(swap_dialog)
 
 $(DESTDIR):
-	git clone https://github.com/${PROJECT}.git $@
+	git clone https://github.com/${MYPROJECT}.git $@
