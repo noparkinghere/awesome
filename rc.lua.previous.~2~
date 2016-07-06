@@ -51,8 +51,6 @@ end
 run_once("urxvtd")
 -- run_once("nautilus")
 run_once("unclutter -root")
-run_once("gnome-session")
-
 -- }}}
 
 -- {{{ Variable definitions
@@ -71,9 +69,6 @@ shutdown   = "shutdown -h now"
 restart    = "reboot"
 filemanage = "nautilus"
 VM         = "virtualbox"
-lock       = "gnome-screensaver-command -l"
-calculator = "gnome-calculator"
-
 
 
 -- user defined
@@ -99,7 +94,7 @@ local layouts = {
 -- {{{ Tags
 tags = {
    names = { "term", "web", "files", "vm", "other" },
-   layout = { layouts[3], layouts[1], layouts[3], layouts[5], layouts[1] }
+   layout = { layouts[3], layouts[2], layouts[3], layouts[5], layouts[1] }
 }
 for s = 1, screen.count() do
 -- Each screen has its own tag table.
@@ -540,8 +535,6 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "r",      awesome.restart),
     awful.key({ modkey, "Shift"   }, "q",      awesome.quit),
     awful.key({ modkey,altkey,"Control"  }, "s",      function () awful.util.spawn(shutdown) end),
-    awful.key({ modkey,altkey,"Control"  }, "l",      function () awful.util.spawn(lock) end),
-    awful.key({ modkey,"Control"  }, "c",      function () awful.util.spawn(calculator) end),
     awful.key({ modkey,altkey,"Control"  }, "r",      function () awful.util.spawn(restart) end),
     
     -- Dropdown terminal
