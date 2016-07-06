@@ -73,7 +73,7 @@ filemanage = "nautilus"
 VM         = "virtualbox"
 lock       = "gnome-screensaver-command -l"
 calculator = "gnome-calculator"
-
+music      = "netease-cloud-music"
 
 
 -- user defined
@@ -542,6 +542,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,altkey,"Control"  }, "s",      function () awful.util.spawn(shutdown) end),
     awful.key({ modkey,altkey,"Control"  }, "l",      function () awful.util.spawn(lock) end),
     awful.key({ modkey,"Control"  }, "c",      function () awful.util.spawn(calculator) end),
+    awful.key({ modkey,"Control"  }, "m",      function () awful.util.spawn(music) end),
     awful.key({ modkey,altkey,"Control"  }, "r",      function () awful.util.spawn(restart) end),
     
     -- Dropdown terminal
@@ -569,12 +570,13 @@ globalkeys = awful.util.table.join(
             volumewidget.update()
         end),
     ]]
+    --[[
     awful.key({ altkey, "Control" }, "m",
         function ()
             os.execute(string.format("amixer set %s 100%%", volumewidget.channel))
             volumewidget.update()
         end),
-
+    ]]
     -- MPD control
     awful.key({ altkey, "Control" }, "Up",
         function ()
