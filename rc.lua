@@ -51,7 +51,7 @@ end
 run_once("urxvtd")
 -- run_once("nautilus")
 run_once("unclutter -root")
-run_once("gnome-session")
+-- run_once("gnome-session")
 
 -- }}}
 
