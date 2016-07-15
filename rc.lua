@@ -52,6 +52,7 @@ run_once("urxvtd")
 -- run_once("nautilus")
 run_once("unclutter -root")
 -- run_once("gnome-session")
+run_once("xmodmap /home/demon/ .xmodmap 2>/dev/null")
 
 -- }}}
 
@@ -74,6 +75,7 @@ VM         = "virtualbox"
 lock       = "gnome-screensaver-command -l"
 calculator = "gnome-calculator"
 music      = "netease-cloud-music"
+xmodmap    = "xmodmap /home/demon/.xmodmap"
 
 
 -- user defined
@@ -543,6 +545,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,altkey,"Control"  }, "l",      function () awful.util.spawn(lock) end),
     awful.key({ modkey,"Control"  }, "c",      function () awful.util.spawn(calculator) end),
     awful.key({ modkey,"Control"  }, "m",      function () awful.util.spawn(music) end),
+    awful.key({ modkey,"Control"  }, "x",      function () awful.util.spawn(xmodmap) end),
     awful.key({ modkey,altkey,"Control"  }, "r",      function () awful.util.spawn(restart) end),
     
     -- Dropdown terminal
