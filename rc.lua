@@ -603,7 +603,7 @@ globalkeys = awful.util.table.join(
         end),
 
     -- Copy to clipboard
-    awful.key({ modkey }, "c", function () os.execute("xsel -p -o | xsel -i -b") end),
+    -- awful.key({ modkey }, "c", function () os.execute("xsel -p -o | xsel -i -b") end),
 
     -- User programs
     -- awful.key({ modkey }, "q", function () awful.util.spawn(browser) end),
@@ -658,7 +658,7 @@ clientkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
     awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
-    awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end),
+    awful.key({ modkey,           }, "c",      function (c) c.ontop = not c.ontop            end),
     awful.key({ modkey,           }, "n",
         function (c)
             -- The client currently has the input focus, so it cannot be
@@ -718,6 +718,7 @@ for i = 1, 9 do
                   end))
 end
 
+-- 设置窗口快捷键，mod+鼠标左键移动窗口，alt+鼠标左键调整窗口大小
 clientbuttons = awful.util.table.join(
     awful.button({ }, 1, function (c) client.focus = c; c:raise() end),
     awful.button({ modkey }, 1, awful.mouse.client.move),
