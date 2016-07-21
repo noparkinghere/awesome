@@ -49,6 +49,7 @@ function run_once(cmd)
 end
 
 run_once("urxvtd")
+run_once("bash startup.sh")
 -- run_once("nautilus")
 run_once("unclutter -root")
 -- run_once("gnome-session")
