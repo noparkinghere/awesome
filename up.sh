@@ -6,6 +6,5 @@ cp /etc/rc.local ./rc.local.backup
 echo "git commit..."
 git add .
 git commit -m "update awesome configuration"
-git pull
 echo "push my awesome update to github"
 git push origin master
