@@ -12,7 +12,7 @@
 # By default this script does nothing.
 
 # 挂在硬盘的独立分区
-sudo mount /dev/sda5 /home/demon/Space/
+# sudo mount /dev/sda5 /home/demon/Space/
 # github的访问不经过VPN，直接走网卡
 sudo ip route add 192.30.252.0/22 via 192.168.18.1 dev eno1
 # 键盘caps lock和右侧ctrl进行交换

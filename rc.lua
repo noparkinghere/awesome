@@ -49,7 +49,7 @@ function run_once(cmd)
 end
 
 run_once("urxvtd")
-run_once("bash startup.sh")
+run_once("bash /home/demon/.config/awesome/startup.sh")
 -- run_once("nautilus")
 run_once("unclutter -root")
 -- run_once("gnome-session")
@@ -658,7 +658,7 @@ clientkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
     awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
-    awful.key({ modkey,           }, "/",      function (c) c.ontop = not c.ontop            end),
+    awful.key({ altkey,           }, "d",      function (c) c.ontop = not c.ontop            end),
     awful.key({ modkey,           }, "n",
         function (c)
             -- The client currently has the input focus, so it cannot be
