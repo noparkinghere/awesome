@@ -91,10 +91,10 @@ local layouts = {
     awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
-    awful.layout.suit.fair,
+    -- awful.layout.suit.fair,
     -- awful.layout.suit.fair.horizontal,
     -- awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
+    -- awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
 }
 -- }}}
@@ -102,7 +102,7 @@ local layouts = {
 -- {{{ Tags
 tags = {
    names = { "term", "web", "files", "vm", "edit", "others" },
-   layout = { layouts[3], layouts[1], layouts[3], layouts[5], layouts[1], layouts[1] }
+   layout = { layouts[2], layouts[2], layouts[3], layouts[3], layouts[1], layouts[1] }
 }
 for s = 1, screen.count() do
 -- Each screen has its own tag table.
