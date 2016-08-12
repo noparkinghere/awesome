@@ -102,7 +102,7 @@ local layouts = {
 -- {{{ Tags
 tags = {
    names = { "term", "web", "files", "vm", "edit", "others" },
-   layout = { layouts[2], layouts[2], layouts[3], layouts[3], layouts[1], layouts[1] }
+   layout = { layouts[2], layouts[2], layouts[1], layouts[3], layouts[1], layouts[1] }
 }
 for s = 1, screen.count() do
 -- Each screen has its own tag table.
@@ -546,7 +546,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,altkey,"Control"  }, "l",      function () awful.util.spawn(lock) end),
     awful.key({ modkey,"Control"  }, "c",      function () awful.util.spawn(calculator) end),
     awful.key({ modkey,"Control"  }, "m",      function () awful.util.spawn(music) end),
-    awful.key({ modkey,"Control"  }, "x",      function () awful.util.spawn(xmodmap) end),
+    awful.key({ modkey,"Control"  }, "x",      function () awful.util.spawn(XMind) end),
+    awful.key({"Control" }, "space",      function () awful.util.spawn(xmodmap) end),
     awful.key({ modkey,altkey,"Control"  }, "r",      function () awful.util.spawn(restart) end),
     
     -- Dropdown terminal
@@ -721,8 +722,8 @@ end
 -- 设置窗口快捷键，mod+鼠标左键移动窗口，alt+鼠标左键调整窗口大小
 clientbuttons = awful.util.table.join(
     awful.button({ }, 1, function (c) client.focus = c; c:raise() end),
-    awful.button({ modkey }, 1, awful.mouse.client.move),
-    awful.button({ modkey }, 3, awful.mouse.client.resize))
+    awful.button({ altkey }, 1, awful.mouse.client.move),
+    awful.button({ altkey }, 3, awful.mouse.client.resize))
 
 -- Set keys
 root.keys(globalkeys)
