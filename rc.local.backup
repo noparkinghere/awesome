@@ -11,11 +11,14 @@
 #
 # By default this script does nothing.
 
-# 挂在硬盘的独立分区
-sudo mount /dev/sda5 /home/demon/Space/
-# github的访问不经过VPN，直接走网卡
-sudo ip route add 192.30.252.0/22 via 192.168.18.1 dev eno1
-# 键盘caps lock和右侧ctrl进行交换
-#xmodmap /home/demon/.xmodmap 2>/dev/null
+# 宿舍电脑备份启动文件
+# 挂载硬盘的两个分区
+mount /dev/sda6 /home/demon/Learn
+mount /dev/sda5 /home/demon/Media
 
+# 键盘caps lock和右侧ctrl进行交换
+xmodmap /home/demon/.xmodmap 2>/dev/null
+
+
+exit 0
 exit 0

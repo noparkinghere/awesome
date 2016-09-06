@@ -78,6 +78,7 @@ calculator = "gnome-calculator"
 music      = "netease-cloud-music"
 xmodmap    = "xmodmap /home/demon/.xmodmap"
 xmind      = "XMind"
+steam      = "steam"
 
 -- user defined
 -- browser    = "firefox"
@@ -547,6 +548,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,"Control"  }, "c",      function () awful.util.spawn(calculator) end),
     awful.key({ modkey,"Control"  }, "m",      function () awful.util.spawn(music) end),
     awful.key({ modkey,"Control"  }, "x",      function () awful.util.spawn(xmind) end),
+    awful.key({ modkey,"Control"  }, "d",      function () awful.util.spawn(steam) end),
     awful.key({"Control" }, "space",      function () awful.util.spawn(xmodmap) end),
     awful.key({ modkey,altkey,"Control"  }, "r",      function () awful.util.spawn(restart) end),
     
