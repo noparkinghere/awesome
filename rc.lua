@@ -724,8 +724,9 @@ end
 -- 设置窗口快捷键，mod+鼠标左键移动窗口，alt+鼠标左键调整窗口大小
 clientbuttons = awful.util.table.join(
     awful.button({ }, 1, function (c) client.focus = c; c:raise() end),
-    awful.button({ modkey }, 1, awful.mouse.client.move),
-    awful.button({ altkey }, 1, awful.mouse.client.resize))
+    awful.button({ altkey }, 1, awful.mouse.client.move),
+--  awful.button({ altkey }, 1, awful.mouse.client.resize))
+    awful.button({ altkey }, 3, awful.mouse.client.resize))
 
 -- Set keys
 root.keys(globalkeys)
