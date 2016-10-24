@@ -11,12 +11,17 @@
 #
 # By default this script does nothing.
 
-# 挂在硬盘的独立分区
-# sudo mount /dev/sda5 /home/demon/Space/
+
 # github的访问不经过VPN，直接走网卡
 sudo ip route add 192.30.252.0/22 via 192.168.18.1 dev eno1
+# 腾讯云服务器ssh过滤
+sudo ip route add 123.206.229.202 via 192.168.18.1 dev eno1
+
 # 键盘caps lock和右侧ctrl进行交换
-xmodmap /home/demon/.xmodmap 2>/dev/null
+# xmodmap /home/demon/.xmodmap 2>/dev/null
+
+# 挂在硬盘的独立分区
+sudo mount /dev/sda5 /home/demon/Space/
 
 # gnome下调用网络管理控件
 nm-applet
