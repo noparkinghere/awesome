@@ -52,6 +52,9 @@ run_once("urxvtd")
 run_once("bash /home/demon/.config/awesome/startup.sh")
 -- run_once("nautilus")
 run_once("unclutter -root")
+-- run_once("fcitx-autostart")
+-- run_once("sogou-qimpanel-watchdog")
+
 -- run_once("gnome-session")
 -- run_once("xmodmap /home/demon/ .xmodmap 2>/dev/null")
 
