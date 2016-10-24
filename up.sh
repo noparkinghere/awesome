@@ -7,4 +7,4 @@ echo "git commit..."
 git add .
 git commit -m "update awesome configuration"
 echo "push my awesome update to github"
-git push origin master
+git push origin work
