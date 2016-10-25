@@ -49,7 +49,7 @@ function run_once(cmd)
 end
 
 run_once("urxvtd")
-run_once("bash ~/.config/awesome/startup.sh")
+run_once("~/.config/awesome/startup.sh")
 -- run_once("nautilus")
 run_once("unclutter -root")
 -- run_once("fcitx-autostart")
