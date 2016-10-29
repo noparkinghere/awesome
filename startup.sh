@@ -22,9 +22,13 @@ sudo ip route add 123.206.229.202 via 192.168.18.1 dev eno1
 
 # 挂在硬盘的独立分区
 sudo mount /dev/sda5 /home/demon/Space/
-
+# 挂载硬盘到当前用户目录下的Download目录中
+sudo mount /dev/sda6 ~/Extern/
 # gnome下调用网络管理控件
 nm-applet
+
+aria2c --conf-path=/home/demon/.aria2/aria2.conf -D
+
 
 
 exit 0

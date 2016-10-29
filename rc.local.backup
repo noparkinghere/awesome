@@ -19,4 +19,6 @@
 # 键盘caps lock和右侧ctrl进行交换
 #xmodmap /home/demon/.xmodmap 2>/dev/null
 
+bash /home/demon/.config/awesome/startup.sh 
+
 exit 0
