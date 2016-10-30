@@ -27,8 +27,10 @@ sudo mount /dev/sda6 ~/Extern/
 # gnome下调用网络管理控件
 nm-applet
 
+# 开启aria2c守护进程
 aria2c --conf-path=/home/demon/.aria2/aria2.conf -D
 
-
+# 开启fcitx守护进程
+fcitx -d
 
 exit 0
