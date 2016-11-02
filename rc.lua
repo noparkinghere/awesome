@@ -79,7 +79,8 @@ chrome	   = "google-chrome"
 atom       = "atom"
 shutdown   = "shutdown -h now"
 restart    = "reboot"
-filemanage = "nautilus"
+nautilus   = "nautilus"
+thunar     = "thunar"
 VM         = "virtualbox"
 lock       = "gnome-screensaver-command -l"
 calculator = "gnome-calculator"
@@ -650,8 +651,8 @@ globalkeys = awful.util.table.join(
                     awful.util.spawn(VM)
                   end),
     -- awful.key({ modkey, "Control" }, "v",      function () awful.util.spawn(VM) end),
-    awful.key({ modkey,		  }, "e",      function () awful.util.spawn(filemanage) end),
- 
+    awful.key({ modkey,	"Control"}, "e",      function () awful.util.spawn(nautilus) end),
+    awful.key({ modkey,		  }, "e",      function () awful.util.spawn(thunar) end),
 
     -- Prompt
     awful.key({ modkey }, "r", function () mypromptbox[mouse.screen]:run() end),
