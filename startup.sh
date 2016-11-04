@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash
 #
 # rc.local
 #
@@ -11,15 +11,13 @@
 #
 # By default this script does nothing.
 
-# 挂在硬盘的独立分区
-# sudo mount /dev/sda5 /home/demon/Space/
-# github的访问不经过VPN，直接走网卡
-sudo ip route add 192.30.252.0/22 via 192.168.18.1 dev eno1
-# 键盘caps lock和右侧ctrl进行交换
-xmodmap /home/demon/.xmodmap 2>/dev/null
-
 # gnome下调用网络管理控件
 nm-applet
 
+# 开启aria2c守护进程
+aria2c  -D
+
+# 开启搜狗输入法
+sogou-qimpanel
 
 exit 0

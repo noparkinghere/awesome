@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash
 #
 # rc.local
 #
@@ -12,6 +12,15 @@
 # By default this script does nothing.
 
 
-bash /home/damon/.config/awesome/sys_startup.sh
+# github的访问不经过VPN，直接走网卡
+sudo ip route add 192.30.252.0/22 via 192.168.18.1 dev eno1
+# 腾讯云服务器ssh过滤
+sudo ip route add 123.206.229.202 via 192.168.18.1 dev eno1
+
+# fcitx deamon
+sudo fcitx -d
+
+# 禁用触摸板
+sudo rmmod psmouse
 
 exit 0

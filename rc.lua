@@ -48,10 +48,18 @@ function run_once(cmd)
   awful.util.spawn_with_shell("pgrep -u $USER -x " .. findme .. " > /dev/null || (" .. cmd .. ")")
 end
 
-run_once("urxvtd")
-run_once("bash /home/demon/.config/awesome/startup.sh")
+run_once("sogou-qimpanel")
+-- run_once("urxvtd")
+-- run_once("bash /home/demon/.config/awesome/startup.sh")
+run_once("nm-applet")
+run_once("aria2c -D")
+
+
 -- run_once("nautilus")
-run_once("unclutter -root")
+-- run_once("unclutter -root")
+-- run_once("fcitx-autostart")
+-- run_once("sogou-qimpanel-watchdog")
+
 -- run_once("gnome-session")
 -- run_once("xmodmap /home/demon/ .xmodmap 2>/dev/null")
 
@@ -71,7 +79,8 @@ chrome	   = "google-chrome"
 atom       = "atom"
 shutdown   = "shutdown -h now"
 restart    = "reboot"
-filemanage = "nautilus"
+nautilus   = "nautilus"
+thunar     = "thunar"
 VM         = "virtualbox"
 lock       = "gnome-screensaver-command -l"
 calculator = "gnome-calculator"
@@ -642,8 +651,8 @@ globalkeys = awful.util.table.join(
                     awful.util.spawn(VM)
                   end),
     -- awful.key({ modkey, "Control" }, "v",      function () awful.util.spawn(VM) end),
-    awful.key({ modkey,		  }, "e",      function () awful.util.spawn(filemanage) end),
- 
+    awful.key({ modkey,	"Control"}, "e",      function () awful.util.spawn(nautilus) end),
+    awful.key({ modkey,		  }, "e",      function () awful.util.spawn(thunar) end),
 
     -- Prompt
     awful.key({ modkey }, "r", function () mypromptbox[mouse.screen]:run() end),
