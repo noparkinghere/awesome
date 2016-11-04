@@ -13,9 +13,9 @@
 
 
 # github的访问不经过VPN，直接走网卡
-sudo ip route add 192.30.252.0/22 via 192.168.1.1 dev eno1
+sudo ip route add 192.30.252.0/22 via 192.168.0.1 dev enp3s0
 # 腾讯云服务器ssh过滤
-sudo ip route add 123.206.229.202 via 192.168.1.1 dev eno1
+sudo ip route add 123.206.229.202 via 192.168.0.1 dev enp3s0
 
 # fcitx deamon
 sudo fcitx -d
