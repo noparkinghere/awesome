@@ -158,7 +158,7 @@ mytextclock = lain.widgets.abase({
 -- Calendar
 lain.widgets.calendar:attach(mytextclock, { font_size = 12 }) 
 
--- Weather
+--{{{ Weather
 weathericon = wibox.widget.imagebox(beautiful.widget_weather)
 myweather = lain.widgets.weather({
     city_id = 123456, -- placeholder
@@ -168,7 +168,7 @@ myweather = lain.widgets.weather({
         widget:set_markup(markup("#eca4c4", descr .. " @ " .. units .. "°C "))
     end
 })
-
+--}}}
 -- / fs
 fsicon = wibox.widget.imagebox(beautiful.widget_fs)
 fswidget = lain.widgets.fs({
@@ -246,18 +246,21 @@ netdownicon = wibox.widget.imagebox(beautiful.widget_netdown)
 netdowninfo = wibox.widget.textbox()
 netupicon = wibox.widget.imagebox(beautiful.widget_netup)
 --netupicon.align = "middle"
+
+
 netupinfo = lain.widgets.net({
     settings = function()
         if iface ~= "network off" and
            string.match(myweather._layout.text, "N/A")
         then
-            myweather.update()
+--            myweather.update()
         end
 
         widget:set_markup(markup("#e54c62", net_now.sent .. " "))
         netdowninfo:set_markup(markup("#87af5f", net_now.received .. " "))
     end
 })
+
 
 -- MEM
 memicon = wibox.widget.imagebox(beautiful.widget_mem)
