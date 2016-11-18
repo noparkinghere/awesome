@@ -6,5 +6,7 @@ cp /etc/rc.local ./rc.local.backup
 echo "git commit..."
 git add .
 git commit -m "update awesome configuration"
+
+# 更新上传至github work分支
 echo "push my awesome update to github"
 git push origin work
